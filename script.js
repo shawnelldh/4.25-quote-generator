@@ -57,7 +57,7 @@ async function getQuote() {
 
       //Event Listeners
       newQuoteBtn.addEventListener('click')
-
+       twitterBtn.addEventListener('click', tweetQuote);
       
 
    }
