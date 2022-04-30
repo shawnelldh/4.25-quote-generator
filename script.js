@@ -62,7 +62,8 @@ async function getQuote() {
 
    }
 
-   kk
+   // On Loader
+   getQuote();
 
    
   
