@@ -19,6 +19,58 @@ function complete() {
 
 
     }
+}
+
+// Get Quote From API
+async function getQuote() {
+    loading();
+    const proxyUrl = 'https://whispering-tor-04671.herokuapp.com/'
+    const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
+     try {
+        const response = await fetch(ProxyUrl + apiUrl);
+        const data = await response.json();
+        // if Author is blink, add 'Unkown'
+        if (data.quoteAuthor === '') {
+           authorText.innerText = 'Unkwown';
+         } else { 
+            authorText.innerText = data.quoteAuthor;
+         }
+         // Reduce font size for long quotes
+         if (data.quoteText.length > 120) {
+              quote.Text.classList.add('long-quote');
+         } else {
+            quoteText.classList.remove(long-quote);
+         }
+         quoteText.innerText = data.quoteText;
+         // Stop Loader , Show Quote
+         complete();
+      } catch (error) {
+           gerQuote();
+
+      }
+      hh
+
+         
+         
+            }
+
+
+         }
+         
+
+
+
+        }
+    
+
+
+
+        
+
+
+
+
+     }
 
 
 }
